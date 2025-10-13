@@ -1,11 +1,4 @@
-# tac.py — Three-Address Code generator
-# - Handles literals (int, float, bool, char, string)
-# - if/else, while, for (init/post as VarDecl/Assign/ExprStmt)
-# - print(expr) lowered to "print <val>"
-# - NEW: short-circuit expansion for '&&' and '||' so backend doesn't see "t = a && b"
-
 from typing import List, Tuple
-
 # --- dual import for parser types ---
 try:
     from parser import (
@@ -199,4 +192,5 @@ class TACGen:
         return "0"
 
 def generate(ast: Program) -> Tuple[List[str], List[str]]:
+
     return TACGen().generate(ast)
