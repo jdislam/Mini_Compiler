@@ -1,6 +1,3 @@
-# astnodes.py
-# AST node definitions + pretty printer for debugging `--phase ast`.
-
 from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import List, Optional, Union
@@ -221,3 +218,4 @@ def print_ast(node: Node, depth: int = 0) -> str:
         return "\n".join(out)
 
     return f"{I}<unknown node {type(node).__name__}>"
+
