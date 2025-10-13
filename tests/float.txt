@@ -1,0 +1,7 @@
+float f = 0.9;
+float g = 0.5;
+int main() 
+{
+  print(f + g);
+  return 0;
+}

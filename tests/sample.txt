@@ -1,0 +1,21 @@
+int main() {
+  char c = 'M';
+  char d = 'D';
+  string s = "Jahid";
+  print(c);      // prints: M
+  print(d);      // prints: D
+  print(s);      // prints: Jahid
+
+  int i = 0;
+  for (i = 0; i < 5; i = i + 1) {
+    print(i);    // prints: 0 1 2 3 4
+  }
+
+  i = 2;
+  while (i < 5) {
+    print(i);    // prints: 2 3 4
+    i = i + 1;
+  }
+
+  return;
+}
