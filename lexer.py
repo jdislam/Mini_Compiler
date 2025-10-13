@@ -1,8 +1,3 @@
-# lexer.py
-# Converts source text to a stream of tokens with (kind, lexeme, line, col).
-# Supports C-like whitespace, // line comments, and /* block */ comments.
-# NEW: string and char literal scanning, && and ||, 'for' keyword.
-
 from dataclasses import dataclass
 from typing import List, Tuple
 
@@ -230,5 +225,6 @@ class Lexer:
             # anything else is an error
             errors.append(f"LexError: unexpected character '{ch}' at {line}:{col}")
             bump()
+
 
         return out, errors
