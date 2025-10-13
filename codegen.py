@@ -1,4 +1,3 @@
-# codegen.py — build_signatures + lower_to_asm (readable ASM), with floats
 from typing import Dict, List, Tuple
 from parser import Program
 
