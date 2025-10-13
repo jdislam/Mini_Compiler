@@ -1,5 +1,3 @@
-
-# __init__.py
 from .lexer import Lexer
 from .parser import parse, ast_to_string
 from .sema import analyze as sema_analyze
