@@ -1,13 +1,3 @@
-# parser.py — Recursive-descent parser for the mini language
-# Features:
-# - Types: int, float, bool, void, char, string
-# - Stmts: var decl, if/else, while, for, return, assignment, expr stmt, block
-# - Expr precedence: ||, &&, == !=, < <= > >=, + -, * / %, unary (-, !)
-# - Literals: int, float, true/false, 'c', "string"
-# - Function defs with params
-# - For-loop header accepts: VarDecl | Assign | Expr for init, Expr (or empty) for cond,
-#   and Assign | Expr for post.
-
 from dataclasses import dataclass
 from typing import List, Optional, Tuple
 
@@ -467,4 +457,5 @@ def ast_to_string(ast: Program) -> str:
     for f in ast.funcs:
         ps = ", ".join(f"{p.type.name} {p.name}" for p in f.params)
         lines.append(f"{f.ret_type.name} {f.name}({ps}) {{ ... }}")
+
     return "\n".join(lines)
