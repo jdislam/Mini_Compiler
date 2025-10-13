@@ -1,6 +1,3 @@
-# vm.py — executes the readable three-address ASM produced by lower_to_asm
-# NEW: support strings/chars in memory and literals
-
 from typing import List, Tuple, Dict, Union
 
 Value = Union[int, float, str]
@@ -125,5 +122,6 @@ def run(asm_lines: List[str], signatures=None) -> Tuple[int, List[str]]:
 
         if op == "RET" or op == "HALT":
             return 0, out
+
 
     return 0, out
