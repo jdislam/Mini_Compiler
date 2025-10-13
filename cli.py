@@ -1,10 +1,3 @@
-# cli.py
-# Full CLI for the mini-compiler: tokens | ast | sema | tac | opt | asm | run
-# - Supports multiple input files
-# - Optimizer (--opt) and optimized TAC dump (--opt-dump)
-# - Pretty banners for each phase
-# - Pretty TAC numbering with T1/T2/... and "x" for '*', "uminus" for unary '-'
-
 import argparse
 import sys
 from pathlib import Path
