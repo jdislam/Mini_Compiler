@@ -1,10 +1,3 @@
-# sema.py — Semantic analysis (symbol table + type checking)
-# - Types: int, float, bool, char, string, void
-# - Built-in functions (hidden from printed symbol table): print/println/printc/printlnc/prints
-# - For-loop: init may be VarDecl/Assign/ExprStmt; post may be Assign/ExprStmt
-# - Allows bare 'return;' in int functions
-# - Report prints a SYMBOL TABLE (globals, then per-function params/locals)
-
 from dataclasses import dataclass
 from typing import Dict, List, Optional, Tuple
 
