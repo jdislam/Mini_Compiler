@@ -1,6 +1,3 @@
-# errors.py
-# Central error types and tiny helpers for consistent, readable messages.
-
 from __future__ import annotations
 from dataclasses import dataclass
 from typing import Optional
@@ -68,3 +65,4 @@ def make_error_line(phase: str, msg: str, line: int, col: int, file: Optional[st
     """Single-line canonical message."""
     loc = f"{file+':' if file else ''}{line}:{col}"
     return f"{phase.upper()} Error: {msg} at {loc}"
+
