@@ -1,10 +1,3 @@
-# optimizer.py — simple TAC optimizer:
-# - copy propagation
-# - dead copy elimination
-# - local common subexpression elimination (CSE)
-#
-# API: optimize_tac(tac_lines: list[str]) -> (optimized_lines: list[str], errors: list[str])
-
 from typing import List, Tuple, Dict, Optional
 import re
 
