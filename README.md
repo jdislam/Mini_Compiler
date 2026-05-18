@@ -31,3 +31,24 @@ The compiler is organized strictly into separate decoupled components, processin
        │
        ▼
  7. Runtime Execution (`vm.py`) ──► Executes Assembly on an Isolated Virtual Machine Engine
+
+
+## ⚙️ How to Run & Use the CLI
+
+The project features a comprehensive Command Line Interface (`cli.py`). You can stop and dump compilation data at **any** specific phase of execution using the `--phase` flag.
+
+### 1. Compile and run a source file directly:
+```bash
+python cli.py your_program.txt --phase run
+
+# Dump the Lexical Tokens
+python cli.py your_program.txt --phase tokens
+
+# Dump the Abstract Syntax Tree (AST)
+python cli.py your_program.txt --phase ast
+
+# Dump the Intermediate Three-Address Code (TAC)
+python cli.py your_program.txt --phase tac
+
+# Dump the optimized Stack-Machine Assembly
+python cli.py your_program.txt --phase asm --opt
